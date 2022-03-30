@@ -9,7 +9,7 @@ var yesUppercase;
 // Special characters 
 symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 // Numeric characters
-number = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // Alphabetical characters
 lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -34,21 +34,21 @@ function writePassword() {
     } else if (yesLowerCase && yesUpperCase && yesNumbers && yesSymbols) {
         choices = symbols.concat(lowerCase, upperCase, number);
         // Variations for if 3 options are chosen
-    } else if (yesSymbols && yesNumber && yesUpperCase) {
+    } else if (yesCharacter && yesNumber && yesUpperCase) {
         choices = symbols.concat(number, upperCase);
-    } else if (yesSymbols && yesNumber && yesLowerCase) {
+    } else if (yesCharacter && yesNumber && yesLowerCase) {
         choices = symbols.concat(number, lowerCase);
     } else if (yesLowerCase && yesNumber && yesUppercase) {
         choices = lowerCase.concat(number, upperCase);
-    } else if (yesSymbols && yesLowercase && yesUppercase) {
+    } else if (yesCharacter && yesLowercase && yesUppercase) {
         choices = symbols.concat(lowerCase, upperCase);
     }
     // Variations for if 2 options are chosen
-    else if (yesSymbols && yesNumber) {
+    else if (yesCharacter && yesNumber) {
         choices = symbols.concat(number);
-    } else if (yesSymbols && yesLowercase) {
+    } else if (yesCharacter && yesLowercase) {
         choices = symbols.concat(lowerCase);
-    } else if (yesSymbols && yesUppercase) {
+    } else if (yesCharacter && yesUppercase) {
         choices = symbols.concat(upperCase);
     } else if (yesLowercase && yesNumber) {
         choices = lowerCase.concat(number);
@@ -58,7 +58,7 @@ function writePassword() {
         choices = number.concat(upperCase);
     }
     // Variations for if 1 option is chosen
-    else if (yesSymbols) {
+    else if (yesCharacter) {
         choices = symbols
     } else if (yesNumbers) {
         choices = number
@@ -85,5 +85,5 @@ function UserInput(pword) {
     console.log(pword)
 }
 
-// Add event listener to generate button - Shows password on click.
+//Event listener to generate button - Shows password on click.
 generateBtn.addEventListener("click", writePassword)
