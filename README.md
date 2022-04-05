@@ -1,10 +1,4 @@
 # sarahs-password-generator
-
-Website Live URL: https://sarahgormley.github.io/sarahs-password-generator/
-  
-Screenshot of Site: ![Password Generator Screenshot](./screenshot.png))
-
-
 This Password Generator was created as a way for me to showcase my skills as a software developer, using Javascript to manipulate a webpage into showing a series of prompts to determine the length of a password, and the type of characters the user wants in their password. 
 
 Once all these conditions are met, a secure, random password is shown. 
@@ -18,3 +12,9 @@ Within this ReadMe you will find:
 - Screenshots of the webpage
 - HTML, CSS, and Javascript coding associated with the page
 - This README 
+
+
+Website Live URL: https://sarahgormley.github.io/sarahs-password-generator/
+  
+Screenshot of Site: ![Password Generator Screenshot](./screenshot.png)
+

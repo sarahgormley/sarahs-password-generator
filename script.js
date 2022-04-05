@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 var yesNumbers;
 var yesSymbols;
 var yesLowerCase;
-var yesUppercase;
+var yesUpperCase;
 
 // Special characters 
 symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
@@ -34,27 +34,27 @@ function writePassword() {
     } else if (yesLowerCase && yesUpperCase && yesNumbers && yesSymbols) {
         choices = symbols.concat(lowerCase, upperCase, number);
         // Variations for if 3 options are chosen
-    } else if (yesSymbols && yesNumber && yesUpperCase) {
+    } else if (yesSymbols && yesNumbers && yesUpperCase) {
         choices = symbols.concat(number, upperCase);
-    } else if (yesSymbols && yesNumber && yesLowerCase) {
+    } else if (yesSymbols && yesNumbers && yesLowerCase) {
         choices = symbols.concat(number, lowerCase);
-    } else if (yesLowerCase && yesNumber && yesUppercase) {
+    } else if (yesLowerCase && yesNumbers && yesUpperCase) {
         choices = lowerCase.concat(number, upperCase);
-    } else if (yesSymbols && yesLowercase && yesUppercase) {
+    } else if (yesSymbols && yesLowerCase && yesUpperCase) {
         choices = symbols.concat(lowerCase, upperCase);
     }
     // Variations for if 2 options are chosen
-    else if (yesSymbols && yesNumber) {
+    else if (yesSymbols && yesNumbers) {
         choices = symbols.concat(number);
-    } else if (yesSymbols && yesLowercase) {
+    } else if (yesSymbols && yesLowerCase) {
         choices = symbols.concat(lowerCase);
-    } else if (yesSymbols && yesUppercase) {
+    } else if (yesSymbols && yesUpperCase) {
         choices = symbols.concat(upperCase);
-    } else if (yesLowercase && yesNumber) {
+    } else if (yesLowerCase && yesNumbers) {
         choices = lowerCase.concat(number);
-    } else if (yesLowercase && yesUppercase) {
+    } else if (yesLowerCase && yesUpperCase) {
         choices = lowerCase.concat(upperCase);
-    } else if (yesNumber && yesUppercase) {
+    } else if (yesNumbers && yesUpperCase) {
         choices = number.concat(upperCase);
     }
     // Variations for if 1 option is chosen
@@ -64,7 +64,7 @@ function writePassword() {
         choices = number
     } else if (yesLowerCase) {
         choices = lowerCase
-    } else if (yesUppercase) {
+    } else if (yesUpperCase) {
         choices = upperCase
     }
     // Variable for password- left blank based on user choices
